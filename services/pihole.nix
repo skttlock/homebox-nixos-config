@@ -10,7 +10,6 @@ _: {
 		];
 		environment = {
 			TZ = "America/Los_Angeles";	# change as needed
-			WEBPASSWORD = "pihole2432";	# set admin password
 		};
 		volumes = [
 			"/var/lib/pihole/etc-pihole:/etc/pihole"
