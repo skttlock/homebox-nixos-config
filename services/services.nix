@@ -6,8 +6,8 @@ _: {
 		./pihole.nix
 		./traefik.nix
 		./dashy.nix
-		#./cryptpad.nix
-		#./nextcloud.nix
+		# ./cryptpad.nix
+		# ./nextcloud.nix
 		# ./immich.nix
 	];
 

@@ -6,10 +6,10 @@ _:
 		image = "cryptpad/cryptpad:latest";
 		environment = {
 			CPAD_CONF = "/cryptpad/config/config.js";
-			CPAD_MAIN_DOMAIN = "http://cryptpad.local";
-			CPAD_SANDBOX_DOMAIN = "http://sandbox-cryptpad.local";
-			CPAD_HTTP_UNSAFE_ORIGIN = "http://cryptpad.local";
-			CPAD_HTTP_UNSAFE_SANDBOX = "http://sandbox-cryptpad.local";
+			CPAD_MAIN_DOMAIN = "http://cryptpad.home.arpa";
+			CPAD_SANDBOX_DOMAIN = "http://sandbox-cryptpad.home.arpa";
+			CPAD_HTTP_UNSAFE_ORIGIN = "http://cryptpad.home.arpa";
+			CPAD_HTTP_UNSAFE_SANDBOX = "http://sandbox-cryptpad.home.arpa";
 			CPAD_INSTALL_ONLYOFFICE = "no";
 		};
 		volumes = [
@@ -23,13 +23,13 @@ _:
 			"--label=traefik.enable=true"
 
 			# Main domain routing
-			"--label=traefik.http.routers.cryptpad.rule=Host(`cryptpad.local`)"
+			"--label=traefik.http.routers.cryptpad.rule=Host(`cryptpad.home.arpa`)"
 			"--label=traefik.http.routers.cryptpad.entrypoints=web"
 			"--label=traefik.http.routers.cryptpad.service=cryptpad"
 			"--label=traefik.http.services.cryptpad.loadbalancer.server.port=3000"
 
 			# Sandbox domain routing
-			"--label=traefik.http.routers.cryptpad-sandbox.rule=Host(`sandbox-cryptpad.local`)"
+			"--label=traefik.http.routers.cryptpad-sandbox.rule=Host(`sandbox-cryptpad.home.arpa`)"
 			"--label=traefik.http.routers.cryptpad-sandbox.entrypoints=web"
 			"--label=traefik.http.routers.cryptpad-sandbox.service=cryptpad"
 

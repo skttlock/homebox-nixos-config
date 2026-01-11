@@ -18,7 +18,7 @@ _: {
 		labels = {
 			"traefik.enable" = "true";
 
-			"traefik.http.routers.dashy.rule" = "Host(`dashy.home`)";
+			"traefik.http.routers.dashy.rule" = "Host(`dashy.home.arpa`)";
 			"traefik.http.routers.dashy.entrypoints" = "web";
 
 			"traefik.http.services.dashy.loadbalancer.server.port" = "80";
