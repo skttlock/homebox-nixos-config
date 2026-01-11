@@ -1,14 +1,20 @@
 # dashy.nix
-# imported by ./services.nix
+# imported by ../services.nix
 _: {
+	systemd.tmpfiles.rules = [
+		"d /var/lib/dashy 0755 root root -"
+		"L+ /var/lib/dashy/config.yml - - - - ${./config.yml}"
+	];
+
 	virtualisation.oci-containers.containers.dashy = {
 		image = "lissy93/dashy:latest";
-		# ports = [
+		ports = [
 			# empty, route via Traefik
-		# ];
-		# volumes = [
-		# 	"/var/lib/dashy/config.yml:/app/user-data/conf.yml"
-		# ];
+			"8082:8080"
+		];
+		volumes = [
+			"/var/lib/dashy/config.yml:/app/user-data/conf.yml"
+		];
 		environment = {
 			TZ = "America/Los_Angeles";	# change as needed
 			NODE_ENV = "production";
@@ -17,11 +23,9 @@ _: {
 		};
 		labels = {
 			"traefik.enable" = "true";
-
 			"traefik.http.routers.dashy.rule" = "Host(`dashy.home.arpa`)";
 			"traefik.http.routers.dashy.entrypoints" = "web";
-
-			"traefik.http.services.dashy.loadbalancer.server.port" = "80";
+			"traefik.http.services.dashy.loadbalancer.server.port" = "8082";
 		};
 		extraOptions = [
 			"--network=web"

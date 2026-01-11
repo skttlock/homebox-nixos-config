@@ -1,0 +1,23 @@
+# config.yml
+# linked by ./dashy.nix
+pageInfo:
+  title: HomeBox
+  description: Your Self-Hosted Services
+
+appConfig:
+  theme: colorful
+  layout: auto
+  iconSize: medium
+  language: en
+
+sections:
+  - name: Services
+    items:
+      - title: Pi-hole
+        description: DNS & Ad-blocker
+        icon: hl-pihole
+        url: http://pihole.home.arpa:8080/admin
+      - title: Traefik
+        description: Reverse Proxy
+        icon: hl-traefik
+        url: http://traefik.home.arpa:8081

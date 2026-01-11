@@ -5,7 +5,7 @@ _: {
 		./ssh.nix
 		./pihole.nix
 		./traefik.nix
-		./dashy.nix
+		./dashy/dashy.nix
 		# ./cryptpad.nix
 		# ./nextcloud.nix
 		# ./immich.nix
