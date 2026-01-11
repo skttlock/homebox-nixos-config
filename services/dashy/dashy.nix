@@ -8,9 +8,6 @@ _: {
 
 	virtualisation.oci-containers.containers.dashy = {
 		image = "lissy93/dashy:latest";
-		ports = [
-			"8082:8080"
-		];
 		volumes = [
 			"/var/lib/dashy/config.yml:/app/user-data/conf.yml"
 		];

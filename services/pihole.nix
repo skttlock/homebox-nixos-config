@@ -6,7 +6,7 @@ _: {
 		ports = [
 			"53:53/tcp"
 			"53:53/udp"
-			"8080:80/tcp"			# web interface on port 8080
+			"8080:80/tcp"			# web interface on port 8080, not routed via Traefik
 		];
 		environment = {
 			TZ = "America/Los_Angeles";	# change as needed
@@ -20,12 +20,6 @@ _: {
 			"--cap-add=NET_ADMIN"		# required for DHCP
 			"--network=web"
 		];
-		labels = {
-			"traefik.enable" = "true";
-			"traefik.http.routers.pihole.rule" = "Host(`pihole.home.arpa`)";
-			"traefik.http.routers.pihole.entrypoints" = "web";
-			"traefik.http.services.pihole.loadbalancer.server.port" = "8080";
-		};
 	};	
 
 	systemd.tmpfiles.rules = [
