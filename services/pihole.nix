@@ -10,6 +10,7 @@ _: {
 		];
 		environment = {
 			TZ = "America/Los_Angeles";	# change as needed
+		DNSMASQ_LISTENING = "all";  # for testing; remove when done
 		};
 		volumes = [
 			"/var/lib/pihole/etc-pihole:/etc/pihole"
@@ -17,6 +18,7 @@ _: {
 		];
 		extraOptions = [
 			"--cap-add=NET_ADMIN"		# required for DHCP
+			"--network=web"
 		];
 	};	
 
