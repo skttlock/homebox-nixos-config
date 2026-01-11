@@ -16,6 +16,7 @@ _: {
 			NODE_ENV = "production";
 			UID = "1000";
 			GID = "100";
+			PORT = "8082";
 		};
 		labels = {
 			"traefik.enable" = "true";
