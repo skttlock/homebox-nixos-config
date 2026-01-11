@@ -20,6 +20,12 @@ _: {
 			"--cap-add=NET_ADMIN"		# required for DHCP
 			"--network=web"
 		];
+		labels = {
+			"traefik.enable" = "true";
+			"traefik.http.routers.pihole.rule" = "Host(`pihole.home.arpa`)";
+			"traefik.http.routers.pihole.entrypoints" = "web";
+			"traefik.http.services.pihole.loadbalancer.server.port" = "8080";
+		};
 	};	
 
 	systemd.tmpfiles.rules = [

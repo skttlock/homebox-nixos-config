@@ -9,7 +9,6 @@ _: {
 	virtualisation.oci-containers.containers.dashy = {
 		image = "lissy93/dashy:latest";
 		ports = [
-			# empty, route via Traefik
 			"8082:8080"
 		];
 		volumes = [
