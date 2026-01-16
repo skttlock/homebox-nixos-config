@@ -1,5 +1,5 @@
 # pihole.nix
-# imported by ./services.nix
+# imported by ../services.nix
 _: {
 	virtualisation.oci-containers.containers.pihole = {
 		image = "pihole/pihole:latest";
@@ -26,5 +26,7 @@ _: {
 		"d /var/lib/pihole 0755 root root -"
 		"d /var/lib/pihole/etc-pihole 0755 root root -"
 		"d /var/lib/pihole/etc-dnsmasq.d 0755 root root -"
+		# "C+ /var/lib/pihole/etc-dnsmasq.d/02-local-dns.conf - - - - ${./local-dns.conf}"
+		  "C+ /var/lib/pihole/etc-pihole/custom.list - - - - ${./custom.list}"
 	];
 }
