@@ -70,6 +70,7 @@
      ranger
      tmux
      gotop
+     dig
   #  wget
      git
      gh
