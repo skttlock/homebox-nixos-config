@@ -11,13 +11,53 @@ appConfig:
   language: en
 
 sections:
-  - name: Services
+  - name: System Services
     items:
       - title: Pi-hole
         description: DNS & Ad-blocker
         icon: hl-pihole
-        url: http://pihole.home.arpa:8080/admin
+        url: http://box.home.arpa:8080/admin/login
+        statusCheck: true
       - title: Traefik
         description: Reverse Proxy
         icon: hl-traefik
-        url: http://traefik.home.arpa:8081
+        url: http://traefik.home.arpa:8081/
+        statusCheck: true
+  # - name: Admin Services
+  #   items:
+  #     - title:
+  #       description:
+  #       icon:
+  #       url:
+  #       statusCheck: true
+  - name: User Services
+    items:
+      - title: FileBrowser
+        description: server-stored file browser
+        icon: hl-filebrowser
+        url: http://files.home.arpa
+      - title: NextCloud Office
+        description: Office Suite
+        icon: hl-nextcloud
+        url: http://office.home.arpa
+        statusCheck: true
+  # - name: Information
+  #   items:
+  #     - type: clock
+  #       options:
+  #         timeZone: America/LosAngeles
+  #         format: en-US
+  #         hideDate: false
+  # - name: System Information
+  #   items:
+  #     - type: glances
+  #       options:
+
+
+
+
+      # - title:
+      #   description:
+      #   icon:
+      #   url:
+      #   statusCheck: true
