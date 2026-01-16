@@ -27,6 +27,7 @@ _: {
 		"d /var/lib/pihole/etc-pihole 0755 root root -"
 		"d /var/lib/pihole/etc-dnsmasq.d 0755 root root -"
 		# "C+ /var/lib/pihole/etc-dnsmasq.d/02-local-dns.conf - - - - ${./local-dns.conf}"
-		  "C+ /var/lib/pihole/etc-pihole/custom.list - - - - ${./custom.list}"
+		  # "C+ /var/lib/pihole/etc-pihole/custom.list - - - - ${./custom.list}"
+		  # NOTE: The above two configuration files for local DNS resolving do not work. Changing said setting in the web UI does work.
 	];
 }
