@@ -7,7 +7,7 @@ _: {
 		./traefik.nix
 		./dashy/dashy.nix
 		./filebrowser.nix
-		# ./cryptpad.nix
+		./cryptpad.nix
 		# ./nextcloud.nix
 		# ./immich.nix
 	];

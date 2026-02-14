@@ -10,7 +10,7 @@ _:
 			CPAD_SANDBOX_DOMAIN = "http://sandbox-cryptpad.home.arpa";
 			CPAD_HTTP_UNSAFE_ORIGIN = "http://cryptpad.home.arpa";
 			CPAD_HTTP_UNSAFE_SANDBOX = "http://sandbox-cryptpad.home.arpa";
-			CPAD_INSTALL_ONLYOFFICE = "no";
+			CPAD_INSTALL_ONLYOFFICE = "yes";
 		};
 		volumes = [
 			"/mnt/storage/srv/cryptpad/blob:/cryptpad/blob"

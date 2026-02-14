@@ -36,6 +36,10 @@ sections:
         description: server-stored file browser
         icon: hl-filebrowser
         url: http://files.home.arpa
+      - title: CryptPad
+        description: Office Suite
+        icon: hl-cryptpad
+        url: http://cryptpad.home.arpa
       - title: NextCloud Office
         description: Office Suite
         icon: hl-nextcloud
